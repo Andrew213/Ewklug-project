@@ -1,0 +1,97 @@
+@import "vars";
+@import "global";
+
+.header {
+   background-color: #fff;
+   box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
+   padding: 14px 0;
+
+   &__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   &__nav {
+      margin-left: auto;
+      margin-right: 71px;
+   }
+
+   &__menu-item {
+      &:not(:last-child) {
+         margin-right: 82px;
+      }
+   }
+
+   &__menu-link {
+      color: #000;
+      font-weight: 600;
+      padding-bottom: 5px;
+      font-size: 18px;
+
+      &:hover {
+         border-bottom: 2px solid $yellow;
+      }
+   }
+
+   &__search {
+      background-image: url(../img/icons/Search.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      @include reset-btn;
+      background-color: transparent;
+      width: 26px;
+      height: 26px;
+      margin-right: 10px;
+
+      &::hover {
+         fill: $yellow;
+      }
+   }
+}
+
+// ----- HEADER END
+
+// ----- HERO-SLIDER START
+
+.hero-slider {
+   &__item {
+      background-image: url(..//img/top_slide_1.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      max-width: 100%;
+   }
+
+   &__about {
+      padding-top: 103px;
+      padding-left: 78px;
+      padding-bottom: 116px;
+      max-width: 900px;
+   }
+
+   &__title {
+      font-weight: 800;
+      font-size: 70px;
+      line-height: 86px;
+      color: #fff;
+      margin-bottom: 25px;
+   }
+
+   &__text {
+      font-weight: 700;
+      font-size: 24px;
+      color: #fff;
+      line-height: 29px;
+      margin-bottom: 122px;
+   }
+
+   &__btn {
+      padding: 26px 37px;
+      color: #fff;
+      font-weight: 700;
+      font-size: 23px;
+      background-color: $yellow;
+   }
+}
