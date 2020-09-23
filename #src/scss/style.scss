@@ -95,3 +95,138 @@
       background-color: $yellow;
    }
 }
+
+// ----- HERO-SLIDER END
+
+// ----- ABOUT-SECTION START
+
+.about {
+
+   &__title {
+      margin-bottom: 32px;
+   }
+
+   &__text {
+      line-height: 32px;
+      max-width: 1235px;
+      margin-bottom: 44px;
+   }
+
+   &__text-info {
+      display: inline-block;
+      position: relative;
+
+      &::before {
+         content: 'i';
+         width: 2px;
+         height: 10px;
+         color: #fff;
+         padding: 3px 7px;
+         background-color: $yellow;
+         border-radius: 28%;
+      }
+   }
+
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__info {
+      background-image: url(../img/worker.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 622px;
+      max-width: 870px;
+      width: 100%;
+      position: relative;
+
+   }
+
+   &__info-box {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 42px 54px;
+      background: rgba(0, 0, 0, 0.5);
+   }
+
+   &__info-text {
+      color: #fff;
+      font-weight: 700;
+      max-width: 500px;
+      width: 100%;
+      line-height: 32px;
+   }
+
+   &__btn {
+      color: #fff;
+      font-weight: 700;
+      margin-right: 12px;
+      padding: 20px 38px;
+      border: 3px solid $yellow;
+      transition: all .3s;
+
+      &:hover {
+         background-color: $yellow;
+      }
+   }
+
+   &__advantages {
+      max-width: 870px;
+      width: 100%;
+   }
+
+   &__advantages-box {
+      padding: 67px 118px 60px 63px;
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid rgba(202, 202, 202, 1);
+
+      &:not(:last-child) {
+         margin-bottom: 22px;
+      }
+   }
+
+   &__advantages-img {
+
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+   }
+
+   &__advantages-img--gear {
+      width: 178px;
+      height: 153px;
+      margin-top: -10px;
+      margin-left: -5px;
+      background-image: url(../img/icons/gear.svg);
+   }
+
+   &__advantages-img--coub {
+
+      background-image: url(../img/icons/coub.svg);
+      width: 178px;
+      height: 137px;
+
+   }
+
+   &__advantages-text {
+      max-width: 452px;
+      width: 100%;
+      line-height: 32px;
+
+      span {
+         font-weight: 700;
+         font-size: 24px;
+      }
+   }
+}
+
+// ----- ABOUT-SECTION END
+
+// ----- workPlan-SECTION START
