@@ -26,6 +26,8 @@ ul,
 a {
   list-style-type: none;
   text-decoration: none;
+  padding: 0;
+  margin: 0;
 }
 
 li {
@@ -314,6 +316,9 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .steps__left {
@@ -386,6 +391,98 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.questions {
+  margin-bottom: 100px;
+}
+
+.questions__title {
+  margin-bottom: 40px;
+}
+
+.questions__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 32px 0;
+  border-bottom: 1px solid #cacaca;
+}
+
+.questions__item:first-child {
+  border-top: 1px solid #cacaca;
+}
+
+.questions__text {
+  font-weight: 700;
+  font-size: 24px;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.questions__text:hover {
+  cursor: pointer;
+  color: #ff9900;
+}
+
+.questions__btn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: #ececec;
+  border-radius: 50%;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.questions__btn:hover {
+  background-color: #d2d2d2;
+}
+
+.questions__btn::before,
+.questions__btn::after {
+  -webkit-transition: all .8s;
+  -o-transition: all .8s;
+  transition: all .8s;
+  content: "";
+  position: absolute;
+  background-color: rgba(102, 102, 102, 0.8);
+}
+
+.questions__btn::before {
+  left: 50%;
+  top: 10px;
+  bottom: 10px;
+  width: 1px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.questions__btn::after {
+  top: 50%;
+  left: 10px;
+  right: 10px;
+  height: 1px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.questions__btn:hover::before,
+.questions__btn:hover::after {
+  background-color: #000;
 }
 
 .webp .hero-slider__item { background-image: url(..//img/top_slide_1.webp); }
