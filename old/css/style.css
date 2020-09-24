@@ -8,7 +8,7 @@ body {
   height: 100%;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  background-color: #E5E5E5;
+  background-color: #fff;
   color: #333333;
 }
 
@@ -71,6 +71,10 @@ img {
 .title {
   margin-top: 100px;
   font-size: 48px;
+}
+
+.btn-active {
+  color: #ff9900;
 }
 
 .header {
@@ -179,19 +183,14 @@ img {
   margin-bottom: 44px;
 }
 
-.about__text-info {
+.about .tooltip {
   display: inline-block;
-  position: relative;
-}
-
-.about__text-info::before {
-  content: 'i';
-  width: 2px;
-  height: 10px;
-  color: #fff;
-  padding: 3px 7px;
-  background-color: #ff9900;
-  border-radius: 28%;
+  background-image: url(../img/icons/tooltip.svg);
+  margin-bottom: -4px;
+  margin-left: 5px;
+  margin-right: 2px;
+  width: 16px;
+  height: 16px;
 }
 
 .about__inner {
@@ -245,9 +244,9 @@ img {
   margin-right: 12px;
   padding: 20px 38px;
   border: 3px solid #ff9900;
-  -webkit-transition: all .3s;
-  -o-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .about__btn:hover {
@@ -271,7 +270,7 @@ img {
 }
 
 .about__advantages-box:not(:last-child) {
-  margin-bottom: 22px;
+  margin-bottom: 40px;
 }
 
 .about__advantages-img {
@@ -283,8 +282,7 @@ img {
 .about__advantages-img--gear {
   width: 178px;
   height: 153px;
-  margin-top: -10px;
-  margin-left: -5px;
+  margin-top: -14px;
   background-image: url(../img/icons/gear.svg);
 }
 
@@ -303,6 +301,91 @@ img {
 .about__advantages-text span {
   font-weight: 700;
   font-size: 24px;
+}
+
+.steps__title {
+  margin-bottom: 50px;
+}
+
+.steps__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.steps__left {
+  max-width: 758px;
+  width: 100%;
+}
+
+.steps__slider-btn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 18px;
+  margin-bottom: 32px;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.steps__slider-btn:not(:last-child) {
+  margin-right: 70px;
+}
+
+.steps__slider-btn:hover {
+  color: #ff9900;
+}
+
+.steps__text {
+  line-height: 32px;
+  margin-bottom: 70px;
+}
+
+.steps__slider-title {
+  font-size: 24px;
+  display: block;
+  color: #000;
+  font-weight: 700;
+}
+
+.steps__button {
+  display: inline-block;
+  font-weight: 700;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.steps__button--about {
+  color: #fff;
+  margin-right: 20px;
+  background-color: #ff9900;
+  padding: 20px 40px;
+}
+
+.steps__button--contract {
+  padding: 20px 38px;
+  border: 1px solid #333333;
+  color: #333333;
+}
+
+.steps__button--contract:hover {
+  background-color: #333333;
+  color: #fff;
+}
+
+.steps__right {
+  margin-top: 80px;
+  width: 870px;
+  height: 465px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .webp .hero-slider__item { background-image: url(..//img/top_slide_1.webp); }

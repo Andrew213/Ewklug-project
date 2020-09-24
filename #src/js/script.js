@@ -17,6 +17,33 @@ $(function () {
     }
   });
 
+  $('.steps__slider-btn').on('click', function () {
 
+    $('.steps__slider-btn').removeClass('btn-active');
+    $(this).addClass('btn-active');
+  });
 
+  var containerEl = $(".steps__slider")
+
+  var mixer = mixitup(containerEl, {
+    load: {
+      filter: '.category-step1'
+    },
+    animation: {
+      duration: 500
+    }
+  });
 });
+
+
+
+
+
+
+// $(function () {
+//   $('#Container').mixItUp({
+//     load: {
+//       filter: '.category-step1'
+//     }
+//   });
+// });

@@ -173,13 +173,13 @@ gulp.task("style", function () {
     .pipe(dest(path.build.css));
 });
 
-// gulp.task("script", function () {
-//   return gulp
-//     .src(["node_modules/rateyo/src/jquery.rateyo.js"])
-//     .pipe(concat("libs.min.js"))
-//     .pipe(uglify())
-//     .pipe(dest(path.build.js));
-// });
+gulp.task("script", function () {
+  return gulp
+    .src(["node_modules/mixitup/dist/mixitup.js"])
+    .pipe(concat("libs.min.js"))
+    .pipe(uglify())
+    .pipe(dest(path.build.js));
+});
 
 function fontsStyle(params) {
   let file_content = fs.readFileSync(source_folder + "/scss/fonts.scss");
@@ -224,7 +224,7 @@ function clean() {
 
 let build = gulp.series(
   clean,
-  gulp.parallel(js, css, html, images, fonts, "style"),
+  gulp.parallel(js, css, html, images, fonts, "style", "script"),
   fontsStyle
 );
 
