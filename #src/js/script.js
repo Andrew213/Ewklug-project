@@ -30,7 +30,7 @@ $(function () {
       filter: '.category-step1'
     },
     animation: {
-      duration: 500
+      enable: false
     }
   });
 });

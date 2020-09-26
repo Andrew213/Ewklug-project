@@ -21,7 +21,58 @@
       @@include('_questions.html')
    </div>
 
-   <footer class="footer"></footer>
+   <footer class="footer">
+      <div class="fixed-container">
+         <div class="footer__inner">
+            <div class="footer__social">
+               <ul class="footer__social-list">
+                  <li class="footer__social-item">
+                     <a class="footer__logo" href="#"><img src="img/png/footer-logo.png" alt="logo"></a>
+                  </li>
+                  <li class="footer__social-item"><a href="#" class="footer__social-links">О нас</a></li>
+                  <li class="footer__social-item"><a href="#" class="footer__social-links">Проекты</a></li>
+                  <li class="footer__social-item"><a href="#" class="footer__social-links">Отзывы</a></li>
+                  <li class="footer__social-item"><a href="#" class="footer__social-links">Договор оферты</a></li>
+                  <li class="footer__social-item"><a href="#" class="footer__social-links">Договор подряда</a></li>
+                  <li class="footer__social-item"><a href="#" class="footer__social-links">Конфиденциальность</a></li>
+                  <li class="footer__social-item"><a href="#" class="footer__social-links">Партнёрское соглашение</a>
+                  </li>
+               </ul>
+               <div class="footer__social-networks-wrapper">
+                  <a class="footer__social-networks footer__social-networks--fb" href="#"></a>
+                  <a class="footer__social-networks footer__social-networks--vk" href="#"></a>
+                  <a class="footer__social-networks footer__social-networks--inst" href="#"></a>
+               </div>
+            </div>
+            <form class="footer__feedback" action="https://jsonplaceholder.typicode.com/posts" method="POST">
+               <fieldset class="footer__form-inner">
+                  <legend class="footer__title">Оставить заявку</legend>
+                  <input type="text" class="footer__input" placeholder="Фамилия, имя и отчество*" name="ФИО"
+                     autocomplete="on" required>
+                  <input type="email" class="footer__input" placeholder="E-mail*" name="E-mail" required>
+                  <textarea class="footer__input footer__textarea" name="Сообщение" placeholder="Сообщение"
+                     required></textarea>
+                  <div class="footer__btnAndcheck-wrapper">
+                     <button class="footer__btn" type="submit">Отправить данные</button>
+                     <div class="footer__check-wrapper">
+                        <label class="footer__check" for="fer">
+                           <input class="footer__check-input" type="checkbox" name="a" id="fer" checked>
+                           <span class="check-box"></span>
+                           Согласие на обработку данных
+                        </label>
+                     </div>
+                  </div>
+               </fieldset>
+            </form>
+            <p class="footer__text">Высокий уровень вовлечения представителей целевой аудитории является четким
+               доказательством простого факта: разбавленное изрядной долей эмпатии, рациональное мышление позволяет
+               оценить значение модели развития. Таким образом, консультация с широким активом обеспечивает широкому
+               кругу (специалистов) участие в формировании стандартных подходов. </p>
+         </div>
+
+      </div>
+      </div>
+   </footer>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <script src="js/script.min.js"></script>
    <script src="js/libs.min.js"></script>

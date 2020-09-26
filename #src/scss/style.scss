@@ -88,7 +88,7 @@
    }
 
    &__btn {
-      padding: 26px 37px;
+      padding: 25px 40px;
       color: #fff;
       font-weight: 700;
       font-size: 23px;
@@ -102,21 +102,18 @@
 
 .about {
    &__title {
-      margin-bottom: 32px;
+      margin-bottom: 25px;
    }
 
    &__text {
       line-height: 32px;
       max-width: 1235px;
-      margin-bottom: 44px;
+      margin-bottom: 50px;
    }
 
    .tooltip {
       display: inline-block;
       background-image: url(../img/icons/tooltip.svg);
-      // background-repeat: no-repeat;
-      // background-size: cover;
-      // background-position: center;
       margin-bottom: -4px;
       margin-left: 5px;
       margin-right: 2px;
@@ -225,6 +222,7 @@
 // ----- steps-SECTION START
 
 .steps {
+
    &__title {
       margin-bottom: 50px;
    }
@@ -245,7 +243,7 @@
       background-color: transparent;
       font-size: 18px;
       margin-bottom: 32px;
-      transition: all .3s;
+      transition: all 0.3s;
 
       &:not(:last-child) {
          margin-right: 70px;
@@ -254,12 +252,12 @@
       &:hover {
          color: $yellow;
       }
-
    }
 
    &__text {
       line-height: 32px;
-      margin-bottom: 70px;
+      margin-bottom: 66px;
+      overflow: unset;
    }
 
    &__slider-title {
@@ -267,25 +265,24 @@
       display: block;
       color: #000;
       font-weight: 700;
-
+      line-height: 1.5em;
    }
 
    &__button {
       display: inline-block;
       font-weight: 700;
-      transition: all .3s;
+      transition: all 0.3s;
    }
 
    &__button--about {
       color: #fff;
-      margin-right: 20px;
+      margin-right: 24px;
       background-color: $yellow;
-      padding: 20px 40px;
-
+      padding: 18px 40px;
    }
 
    &__button--contract {
-      padding: 20px 38px;
+      padding: 18px 36px;
       border: 1px solid rgba(51, 51, 51, 1);
       color: rgba(51, 51, 51, 1);
 
@@ -331,7 +328,7 @@
    &__text {
       font-weight: 700;
       font-size: 24px;
-      transition: all .3s;
+      transition: all 0.3s;
 
       &:hover {
          cursor: pointer;
@@ -346,7 +343,7 @@
       height: 50px;
       background: rgba(236, 236, 236, 1);
       border-radius: 50%;
-      transition: all .3s;
+      transition: all 0.3s;
 
       &:hover {
          background-color: rgba(210, 210, 210, 1);
@@ -354,12 +351,10 @@
 
       &::before,
       &::after {
-         transition: all .8s;
+         transition: all 0.8s;
          content: "";
          position: absolute;
          background-color: rgba(102, 102, 102, 0.8);
-
-
       }
 
       &::before {
@@ -383,4 +378,140 @@
          background-color: #000;
       }
    }
+}
+
+// ----- QUESTIONS-SECTION END
+
+// ----- FOOTER START
+
+.footer {
+   background-color: rgba(34, 34, 34, 1);
+   color: rgba(202, 202, 202, 1);
+
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      padding: 48px 0 80px 0;
+   }
+
+   &__social-item {
+      display: block;
+
+      &:not(:last-child) {
+         margin-bottom: 15px;
+      }
+   }
+
+   &__social-links {
+      color: rgba(202, 202, 202, 1);
+      font-weight: 600;
+      font-size: 18px;
+   }
+
+   &__social-networks-wrapper {
+      display: flex;
+      margin-top: 118px;
+   }
+
+   &__social-networks {
+      width: 60px;
+      height: 60px;
+      display: block;
+
+      &:not(:last-child) {
+         margin-right: 25px;
+      }
+   }
+
+   &__social-networks--fb {
+      background-image: url(../img/icons/fb.svg);
+   }
+
+   &__social-networks--vk {
+      background-image: url(../img/icons/vk.svg);
+   }
+
+   &__social-networks--inst {
+      background-image: url(../img/icons/inst.svg);
+   }
+
+   &__form-inner {
+      margin-left: 120px;
+      display: flex;
+      flex-direction: column;
+   }
+
+   &__title {
+      padding-top: 10px;
+      font-size: 48px;
+      margin-bottom: 20px;
+   }
+
+   &__input {
+      width: 570px;
+      background-color: rgba(65, 65, 65, 1);
+      border: none;
+      padding: 14px 24px;
+      margin-bottom: 25px;
+      height: 60px;
+   }
+
+   &__textarea {
+      resize: none;
+      margin-bottom: 30px;
+      height: 150px !important;
+   }
+
+   &__btnAndcheck-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   &__btn {
+      // margin-top: 31px;
+      @include reset-btn;
+      padding: 20px 52px;
+      font-weight: 700;
+      color: #fff;
+      background-color: $yellow;
+   }
+
+   &__check {
+      display: flex;
+      align-items: center;
+      padding-left: 19px;
+   }
+
+   &__check-input {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+   }
+
+   &__text {
+      max-width: 363px;
+      width: 100%;
+      margin-top: 80px;
+      line-height: 32px;
+   }
+}
+
+.check-box {
+   position: absolute;
+   margin-left: -19px;
+   width: 14px;
+   height: 14px;
+   box-shadow: 0 0 0 0.1em #CACACA;
+}
+
+.footer__check-input:checked+.check-box {
+   background: no-repeat center;
+   background-image: url(../img/icons/check.svg);
+}
+
+.footer__check-input:focus+.check-box {
+   box-shadow: 0 0 0 0.1em #CACACA, 0 0 0 0.2em #7ed321;
 }
