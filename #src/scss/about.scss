@@ -1,0 +1,164 @@
+.about {
+   &__title {
+      margin-bottom: 25px;
+   }
+
+   &__text {
+      line-height: 32px;
+      max-width: 1235px;
+      margin-bottom: 50px;
+   }
+
+   .tooltip {
+      display: inline-block;
+      background-image: url(../img/icons/tooltip.svg);
+      margin-bottom: -4px;
+      margin-left: 5px;
+      margin-right: 2px;
+      width: 16px;
+      height: 16px;
+   }
+
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+   }
+
+   &__info {
+      background-image: url(../img/worker.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 622px;
+      max-width: 870px;
+      width: 100%;
+      position: relative;
+   }
+
+   &__info-box {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 42px 54px;
+      background: rgba(0, 0, 0, 0.5);
+   }
+
+   &__info-text {
+      color: #fff;
+      font-weight: 700;
+      max-width: 500px;
+      width: 100%;
+      line-height: 32px;
+   }
+
+   &__btn {
+      color: #fff;
+      font-weight: 700;
+      margin-right: 12px;
+      padding: 20px 38px;
+      border: 3px solid $yellow;
+      transition: all 0.3s;
+
+      &:hover {
+         background-color: $yellow;
+      }
+   }
+
+   &__advantages {
+      max-width: 870px;
+      width: 100%;
+   }
+
+   &__advantages-box {
+      padding: 67px 118px 60px 63px;
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid rgba(202, 202, 202, 1);
+
+      &:not(:last-child) {
+         margin-bottom: 40px;
+      }
+   }
+
+   &__advantages-img {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+   }
+
+   &__advantages-img--gear {
+      width: 178px;
+      height: 153px;
+      margin-top: -14px;
+
+      background-image: url(../img/icons/gear.svg);
+   }
+
+   &__advantages-img--coub {
+      background-image: url(../img/icons/coub.svg);
+      width: 178px;
+      height: 137px;
+   }
+
+   &__advantages-text {
+      max-width: 452px;
+      width: 100%;
+      line-height: 32px;
+
+      span {
+         font-weight: 700;
+         font-size: 24px;
+      }
+   }
+}
+
+@media(max-width: 1024px){
+   .about{
+      &__text {
+         max-width: 100%;
+         margin-bottom: 62px;
+      }
+      &__info {
+         height: 640px;
+         min-width: 100%;
+         position: relative;
+         margin-bottom: 50px;
+      }
+      
+   &__info-box {
+      padding-top: 35px;
+      padding-bottom: 40px;
+      padding-left: 44px;
+      background: rgba(0, 0, 0, 0.5);
+   }
+   &__btn {
+      padding: 18px 34px;
+      margin-top: 5px;
+   margin-right: 0;
+   }
+   &__advantages {
+     
+      min-width: 100%;
+   }
+
+   &__advantages-box {
+      padding: 67px 118px 65px 112px;
+      &:not(:last-child) {
+         margin-bottom: 38px;
+      }
+    
+   }
+
+   &__advantages-img--coub {
+      margin-top: 10px;
+   }
+   &__advantages-img--gear {
+      margin-top: -5px;
+   }
+
+   }
+}

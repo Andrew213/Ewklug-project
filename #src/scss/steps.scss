@@ -1,0 +1,112 @@
+.steps {
+
+   &__title {
+      margin-bottom: 50px;
+   }
+
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+   }
+
+   &__left {
+      max-width: 758px;
+      width: 100%;
+   }
+
+   &__slider-btn {
+      @include reset-btn;
+      background-color: transparent;
+      font-size: 18px;
+      margin-bottom: 32px;
+      transition: all 0.3s;
+
+      &:not(:last-child) {
+         margin-right: 70px;
+      }
+
+      &:hover {
+         color: $yellow;
+      }
+   }
+
+   &__text {
+      line-height: 32px;
+      margin-bottom: 66px;
+      overflow: unset;
+   }
+
+   &__slider-title {
+      font-size: 24px;
+      display: block;
+      color: #000;
+      font-weight: 700;
+      line-height: 1.5em;
+   }
+
+   &__button {
+      display: inline-block;
+      font-weight: 700;
+      transition: all 0.3s;
+   }
+
+   &__button--about {
+      color: #fff;
+      margin-right: 24px;
+      background-color: $yellow;
+      padding: 18px 40px;
+   }
+
+   &__button--contract {
+      padding: 18px 36px;
+      border: 1px solid rgba(51, 51, 51, 1);
+      color: rgba(51, 51, 51, 1);
+
+      &:hover {
+         background-color: rgba(51, 51, 51, 1);
+         color: #fff;
+      }
+   }
+
+   &__right {
+      margin-top: 80px;
+      width: 870px;
+      height: 465px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+   }
+}
+
+@media(max-width: 1024px){
+.steps{
+   &__title {
+      margin-bottom: 49px ;
+   }
+   &__right {
+      width: 822px;
+      height: 689px;
+     background-image: url(..//img/1024px/steps__1024.jpg) !important;
+
+   // margin-top: 140px;
+   }
+   &__text{
+      max-width: 437px;
+      margin-top: 10px;
+      margin-bottom: 30px;
+   }
+   &__slider-btn {
+      @include reset-btn;
+      background-color: transparent;
+      font-size: 18px;
+      margin-bottom: 32px;
+      transition: all 0.3s;
+
+     
+   }
+//   &__btn-wrapper{margin-bottom: 3px;}
+
+}
+}
