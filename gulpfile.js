@@ -1,5 +1,6 @@
 let project_folder = require("path").basename(__dirname);
 let source_folder = "#src";
+const CleanCSS = require("clean-css");
 let fs = require("fs");
 let path = {
   build: {
@@ -87,7 +88,7 @@ function css() {
     )
     .pipe(webpcss())
     .pipe(dest(path.build.css))
-    .pipe(clean_css())
+    .pipe(clean_css({level: 2}))
     .pipe(
       rename({
         extname: ".min.css",
