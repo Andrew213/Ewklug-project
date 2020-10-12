@@ -50,3 +50,14 @@
       }
    }
 }
+
+@media(max-width: 1000px){
+   .questions{
+      &__title{
+         margin: 0;
+         font-size: 46px;
+         margin-top: 58px;
+         margin-bottom: 27px;
+      }
+   }
+}

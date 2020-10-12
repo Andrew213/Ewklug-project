@@ -16,6 +16,16 @@
       width: 100%;
    }
 
+   &__background-1000px{
+      background-image: url(..//img/768px/steps__768px.jpg);
+      width: 100%;
+      height: 500px;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   display: none;
+   }
+
    &__slider-btn {
       @include reset-btn;
       background-color: transparent;
@@ -102,11 +112,39 @@
       background-color: transparent;
       font-size: 18px;
       margin-bottom: 32px;
-      transition: all 0.3s;
-
-     
+      transition: all 0.3s; 
    }
-//   &__btn-wrapper{margin-bottom: 3px;}
+}
+}
 
+@media(max-width: 1000px){
+   .steps{
+      &__inner{
+         flex-direction: column;
+      }
+      &__background-1000px{
+         display: block;
+         height: 284px;
+         margin-bottom: 38px;
+   }
+
+   &__btn-wrapper{
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__slider-btn{
+      margin-right: 0 !important;
+      margin-bottom: 50px;
+   }
+   &__right{
+      display: none;
+   }
+   &__left{
+      min-width: 100%;
+   }
+   &__text{
+      max-width: 100%;
+   }
 }
 }

@@ -67,3 +67,14 @@
       }
    }
 }
+
+@media(max-width: 842px){
+   .hero-slider{
+      .fixed-container{
+      padding: 0 !important;   
+      }
+      &__item{
+         background-image: url(..//img/768px/hero__slide1__768px.jpg) !important;
+      }
+   }
+}
