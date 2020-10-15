@@ -8,7 +8,9 @@
       align-items: center;
       justify-content: space-between;
    }
-
+&__burger{
+   display: none;
+}
    &__logo--md{
       display: none;
    }
@@ -56,22 +58,29 @@
 }
 
 
-@media(max-width: 1024px){
+@media(max-width: 1090px){
   .header{
      padding: 26px 0;
-     &__nav, &__logo{
+     &__nav{
         display: none;
      }
      &__logo--md{
         display: block;
      }
      &__burger {
+        @include reset-btn;
+        background-color: transparent;
       display: block;
       position: relative;
       width: 30px;
       height: 20px;
       position: relative;
       z-index: 3;
+      outline: invert;
+   
+      &:focus {
+         outline: 3px solid $yellow;   
+     }
     }
    
     &__burger span {
@@ -117,7 +126,11 @@
       transform: rotate(-45deg);
       bottom: 9px;
     }
-    &__search {margin-right: 0;}
+    &__search {margin-right: 0;
+   &:focus{
+      outline: 2px solid $yellow;
+   }
+   }
   }
   
 }

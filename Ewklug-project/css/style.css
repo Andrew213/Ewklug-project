@@ -150,6 +150,10 @@ fieldset {
           justify-content: space-between;
 }
 
+.header__burger {
+  display: none;
+}
+
 .header__logo--md {
   display: none;
 }
@@ -303,6 +307,7 @@ fieldset {
   font-weight: 700;
   max-width: 500px;
   width: 100%;
+  margin: 0;
   line-height: 32px;
 }
 
@@ -364,6 +369,7 @@ fieldset {
   max-width: 452px;
   width: 100%;
   line-height: 32px;
+  margin: 0;
 }
 
 .about__advantages-text span {
@@ -469,6 +475,7 @@ fieldset {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-image: url(..//img/consultation_bg.jpg);
 }
 
 .questions {
@@ -695,25 +702,12 @@ fieldset {
   }
 }
 
-@media (max-width: 1024px) {
-  .fixed-container {
-    max-width: 1024px;
-    width: 100%;
-    padding: 0 50px !important;
-    margin: 0 auto;
-  }
-
-  .title {
-    margin-top: 60px;
-    font-size: 48px;
-  }
-
+@media (max-width: 1090px) {
   .header {
     padding: 26px 0;
   }
 
-  .header__nav,
-  .header__logo {
+  .header__nav {
     display: none;
   }
 
@@ -722,12 +716,21 @@ fieldset {
   }
 
   .header__burger {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
     display: block;
     position: relative;
     width: 30px;
     height: 20px;
     position: relative;
     z-index: 3;
+    outline: invert;
+  }
+
+  .header__burger:focus {
+    outline: 3px solid #ff9900;
   }
 
   .header__burger span {
@@ -786,6 +789,24 @@ fieldset {
 
   .header__search {
     margin-right: 0;
+  }
+
+  .header__search:focus {
+    outline: 2px solid #ff9900;
+  }
+}
+
+@media (max-width: 1024px) {
+  .fixed-container {
+    max-width: 1024px;
+    width: 100%;
+    padding: 0 50px !important;
+    margin: 0 auto;
+  }
+
+  .title {
+    margin-top: 60px;
+    font-size: 48px;
   }
 
   .hero-slider__item {
@@ -1068,6 +1089,8 @@ fieldset {
 .webp .about__info{ background-image: url(../img/worker.webp); }
 
 .webp .steps__background-1000px{ background-image: url(..//img/768px/steps__768px.webp); }
+
+.webp .steps__right{ background-image: url(..//img/consultation_bg.webp); }
 
 @media (max-width: 1024px){
 

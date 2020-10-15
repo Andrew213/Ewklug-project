@@ -15,24 +15,23 @@
                </li>
             </ul>
             <div class="footer__social-networks-wrapper">
-               <a class="footer__social-networks footer__social-networks--fb" href="#"></a>
-               <a class="footer__social-networks footer__social-networks--vk" href="#"></a>
-               <a class="footer__social-networks footer__social-networks--inst" href="#"></a>
+               <a class="footer__social-networks  footer__social-networks--fb" aria-label="Фейсбук" href="#"></a>
+               <a class="footer__social-networks footer__social-networks--vk" aria-label="Вконтакте" href="#"></a>
+               <a class="footer__social-networks footer__social-networks--inst" aria-label="Инстаграм" href="#"></a>
             </div>
          </div>
          <form class="footer__feedback" action="https://jsonplaceholder.typicode.com/posts" method="POST">
             <fieldset class="footer__form-inner">
                <legend class="footer__title">Оставить заявку</legend>
                <input type="text" class="footer__input" placeholder="Фамилия, имя и отчество*" name="ФИО"
-                  autocomplete="on" required>
-               <input type="email" class="footer__input" placeholder="E-mail*" name="E-mail" required>
-               <textarea class="footer__input footer__textarea" name="Сообщение" placeholder="Сообщение"
-                  required></textarea>
+                  autocomplete="on">
+               <input type="email" class="footer__input" placeholder="E-mail*" name="E-mail">
+               <textarea class="footer__input footer__textarea" name="Сообщение" placeholder="Сообщение"></textarea>
                <div class="footer__btnAndcheck-wrapper">
                   <button class="footer__btn" type="submit">Отправить данные</button>
                   <div class="footer__check-wrapper">
                      <label class="footer__check" for="fer">
-                        <input class="footer__check-input" type="checkbox" name="a" id="fer" checked>
+                        <input class="footer__check-input" type="checkbox" name="a" id="fer" checked required>
                         <span class="check-box"></span>
                         Согласие на обработку данных
                      </label>
@@ -46,6 +45,5 @@
             кругу (специалистов) участие в формировании стандартных подходов. </p>
       </div>
 
-   </div>
    </div>
 </footer> 
