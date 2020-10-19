@@ -4,16 +4,21 @@
       margin-bottom: 50px;
    }
 
-   &__inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      
-   }
-
-   &__left {
-      max-width: 758px;
+   &__slider-wrapper {
       width: 100%;
+      padding-right: 57%;
+      position: relative;
+   
+      &::before{
+         content: '';
+         position: absolute;
+         background-image: url(..//img/consultation_bg.jpg);
+         background: center no-repeat;
+         right: 0;
+         top: 0;
+         width: 870px;
+         height: 465px;
+      }
    }
 
    &__background-1000px{
@@ -45,6 +50,7 @@
    &__text {
       line-height: 32px;
       margin-bottom: 66px;
+      margin-top: 0;
       overflow: unset;
    }
 
@@ -79,15 +85,29 @@
          color: #fff;
       }
    }
+}
 
-   &__right {
-      margin-top: 80px;
-      width: 870px;
-      height: 465px;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      background-image: url(..//img/consultation_bg.jpg);
+@media(max-width: 1600px){
+   .steps{
+      &__slider-wrapper{
+         &::before{
+            background-position-x: right;
+    background-size: 80% 100%;
+         }
+
+      }
+   }
+}
+
+@media(max-width: 1315px){
+   .steps{
+      &__slider-wrapper{
+         &::before{
+            background-position-x: right;
+    background-size: 70% 100%;
+         }
+
+      }
    }
 }
 
@@ -96,18 +116,25 @@
    &__title {
       margin-bottom: 49px ;
    }
-   &__right {
-      width: 822px;
-      height: 689px;
-     background-image: url(..//img/1024px/steps__1024.jpg) !important;
 
-   // margin-top: 140px;
+   &__slider-wrapper{
+      padding-right: 10%;
+
+      &::before{
+      width: 437px;
+  height: 689px;
+  background-size: cover;
+     background-image: url(..//img/1024px/steps__1024.jpg);
+      }
+
    }
+
    &__text{
       max-width: 437px;
       margin-top: 10px;
-      margin-bottom: 30px;
+      margin-bottom: 23px;
    }
+
    &__slider-btn {
       @include reset-btn;
       background-color: transparent;
@@ -120,13 +147,28 @@
 
 @media(max-width: 1000px){
    .steps{
-      &__inner{
-         flex-direction: column;
+
+   &__slider-wrapper{
+padding-right: 0;
+padding-top: 322px;
+
+      &::before{
+display: none;
       }
-      &__background-1000px{
-         display: block;
-         height: 284px;
-         margin-bottom: 38px;
+
+&::after{
+   content: '';
+   background-image: url(..//img/768px/steps__768px.jpg);
+   position: absolute;
+   top: 0;
+   width: 100%;
+   height: 284px;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   left: 0;
+}
+
    }
 
    &__btn-wrapper{
@@ -135,11 +177,7 @@
    }
 
    &__slider-btn{
-      margin-right: 0 !important;
       margin-bottom: 50px;
-   }
-   &__right{
-      display: none;
    }
    &__left{
       min-width: 100%;
