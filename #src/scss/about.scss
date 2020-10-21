@@ -1,12 +1,12 @@
 .about {
    &__title {
-      margin-bottom: 25px;
+      margin-bottom: 23px;
    }
 
    &__text {
       line-height: 32px;
       max-width: 1235px;
-      margin-bottom: 50px;
+      margin-bottom: 48px;
    }
 
    .tooltip {
@@ -43,7 +43,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 42px 54px;
+      padding: 40px 54px;
       background: rgba(0, 0, 0, 0.5);
    }
 
@@ -60,7 +60,7 @@
       color: #fff;
       font-weight: 700;
       margin-right: 12px;
-      padding: 20px 38px;
+      padding: 20px 35px;
       border: 3px solid $yellow;
       transition: all 0.3s;
 
@@ -75,34 +75,16 @@
    }
 
    &__advantages-box {
-      padding: 67px 118px 60px 63px;
+      padding: 67px 118px 70px 63px;
       // display: flex;
       // justify-content: flex-end;
       border: 1px solid rgba(202, 202, 202, 1);
 
       &:not(:last-child) {
-         margin-bottom: 40px;
+         margin-bottom: 28px;
       }
    }
 
-   &__advantages-img {
-      // background-repeat: no-repeat;
-      // background-position: center;
-      // background-size: cover;
-   }
-
-   &__advantages-img--gear {
-      // width: 178px;
-      // height: 153px;
-      // margin-top: -14px;
-      // background-image: url(../img/icons/gear.svg);
-   }
-
-   &__advantages-img--coub {
-      // background-image: url(../img/icons/coub.svg);
-      // width: 178px;
-      // height: 137px;
-   }
 
    &__advantages-text {
       max-width: 687px;
@@ -117,7 +99,7 @@ display: inline-block;
    content: '';
    position: absolute;
    left: 0;
-   top: 0;
+   top: 22px;
    width: 7.5em;
    height: 7.5em;
    background: #FF9900;
@@ -135,7 +117,7 @@ display: inline-block;
          background-size: cover;
          background-repeat: no-repeat;
          left: 50px;
-         top: -33px;
+         top: -12px;
          width: 127px;
          height: 127px;
          z-index: 2;
@@ -148,7 +130,7 @@ display: inline-block;
             background-size: cover;
             background-repeat: no-repeat;
             left: 60px;
-            top: -17px;
+            top: 5px;
             width: 119px;
             height: 132px;
             z-index: 2;
@@ -180,13 +162,17 @@ span{
    .about{
       &__text {
          max-width: 100%;
-         margin-bottom: 62px;
+         margin-bottom: 57px;
       }
       &__info {
          height: 640px;
          position: relative;
       }
       
+&__title{
+   margin-bottom: 30px;
+}
+
    &__info-box {
       padding-top: 35px;
       padding-bottom: 40px;
@@ -203,7 +189,7 @@ span{
    &__advantages-box {
       padding: 67px 118px 65px 112px;
       &:not(:last-child) {
-         margin-bottom: 38px;
+         margin-bottom: 40px;
       }
    }
 
@@ -225,7 +211,20 @@ text-align: left;
       &::after{
          top: 20%;
       }
-         }
+
+&::before{
+   top: -5px;
+}
+   
+}
+
+         &__advantages-text--coub {
+            text-align: left;
+      
+            &::before{
+               top:4%;
+            }
+               }
 
 }
 }
@@ -256,12 +255,23 @@ text-align: left;
          }
       } 
       
+&__info{height: 650px;
+margin-bottom: 40px;
+}
+
+&__advantages-box{padding-bottom: 37px;}
+
+&__advantages-text{
+   &::after{
+      top: 45px;
+   }
+}
       &__advantages-text--coub {
          &::before{
             width: 80px;
             height: 88px;
             left: 6.3%;
-            top: 17%;
+            top: 21%;
          }
       }    
 
@@ -270,7 +280,10 @@ text-align: left;
             height: 82px;
             width: 82px;
             left: 6.3%;
-            top: 12%;
+            top: 20%;
+         }
+         &::after{
+            top: 30%;
          }
       }    
 

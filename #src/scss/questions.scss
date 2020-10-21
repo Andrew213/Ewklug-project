@@ -2,7 +2,7 @@
    margin-bottom: 100px;
 
    &__title {
-      margin-bottom: 40px;
+      margin-bottom: 37px;
    }
 
    &__item {
@@ -11,7 +11,7 @@
       @include reset-btn;
       text-align: left;
       background-color: transparent;
-      padding: 32px 0;
+      padding: 40px 0 46px 3px;
        font-weight: 700;
       font-size: 24px;
       transition: all 0.3s;
@@ -36,6 +36,9 @@
 @media(max-width: 1024px){
    .questions{
       margin-bottom: 60px;
+      &__title{
+         margin-bottom: 40px;
+      }
       &__item{
          line-height: 32px;
          font-size: 20px;
@@ -56,8 +59,18 @@
       &__title{
          margin: 0;
          font-size: 46px;
-         margin-top: 58px;
-         margin-bottom: 27px;
+         margin-top: 60px;
+         margin-bottom: 42px;
+      }
+      &__item{
+         padding-top: 32px;
+         padding-bottom: 27px;
+         &:nth-child(4){
+            padding: 23px 200px 25px 0;
+         }
+         &:nth-child(6){
+            padding: 23px 150px 25px 0;
+         }
       }
    }
 }

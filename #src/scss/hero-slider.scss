@@ -10,7 +10,7 @@
    &__about {
       padding-top: 103px;
       padding-left: 78px;
-      padding-bottom: 116px;
+      padding-bottom: 92px;
       max-width: 900px;
    }
 
@@ -19,7 +19,7 @@
       font-size: 70px;
       line-height: 86px;
       color: #fff;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
    }
 
    &__text {
@@ -27,7 +27,8 @@
       font-size: 24px;
       color: #fff;
       line-height: 29px;
-      margin-bottom: 122px;
+      margin-bottom: 97px;
+      margin-top: 0;
    }
 
    &__btn {
@@ -37,6 +38,10 @@
       font-weight: 700;
       font-size: 23px;
       background-color: $yellow;
+      transition: all .3s;
+      &:hover{
+         background-color: rgba(255, 153, 0, 0.6);;
+      }
    }
 }
 
@@ -51,8 +56,9 @@
          max-width: 100%;
       }
       &__about {
-         padding-top: 156px;
+         padding-top: 158px;
          padding-left: 45px;
+         padding-bottom: 115px;
       }
       &__title{
          font-size: 60px;
@@ -68,13 +74,21 @@
    }
 }
 
-@media(max-width: 842px){
+@media(max-width: 850px){
    .hero-slider{
       .fixed-container{
       padding: 0 !important;   
       }
       &__item{
          background-image: url(..//img/768px/hero__slide1__768px.jpg) !important;
+   background-position: center;
       }
+      &__about{
+         padding-top: 192px;
+         padding-left: 49px;
+         padding-bottom: 117px;
+      }
+      &__title{margin-bottom: 10px;}
+      &__btn{padding: 27px 44px;}
    }
 }

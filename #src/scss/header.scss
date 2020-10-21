@@ -61,6 +61,7 @@
 @media(max-width: 1090px){
   .header{
      padding: 26px 0;
+  
      &__nav{
         display: none;
      }
@@ -126,11 +127,17 @@
       transform: rotate(-45deg);
       bottom: 9px;
     }
-    &__search {margin-right: 0;
+    &__search {
+       margin-right: -2px;
    &:focus{
       outline: 2px solid $yellow;
    }
    }
   }
-  
+}
+
+@media(max-width: 768px){
+ .header{
+    padding-bottom: 10px;
+ }
 }

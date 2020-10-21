@@ -1,7 +1,8 @@
 .steps {
 
    &__title {
-      margin-bottom: 50px;
+      margin-bottom: 53px;
+      margin-top: 100px;
    }
 
    &__slider-wrapper {
@@ -15,27 +16,17 @@
          background-image: url(..//img/consultation_bg.jpg);
          background: center no-repeat;
          right: 0;
-         top: 0;
+         top: 13px;
          width: 870px;
          height: 465px;
       }
-   }
-
-   &__background-1000px{
-      background-image: url(..//img/768px/steps__768px.jpg);
-      width: 100%;
-      height: 500px;
-   background-repeat: no-repeat;
-   background-position: center;
-   background-size: cover;
-   display: none;
    }
 
    &__slider-btn {
       @include reset-btn;
       background-color: transparent;
       font-size: 18px;
-      margin-bottom: 32px;
+      margin-bottom: 43px;
       transition: all 0.3s;
 
       &:not(:last-child) {
@@ -49,7 +40,7 @@
 
    &__text {
       line-height: 32px;
-      margin-bottom: 66px;
+      margin-bottom: 70px;
       margin-top: 0;
       overflow: unset;
    }
@@ -72,7 +63,10 @@
       color: #fff;
       margin-right: 24px;
       background-color: $yellow;
-      padding: 18px 40px;
+      padding: 22px 40px;
+      &:hover{
+         background-color: rgba(255, 153, 0, 0.6);;
+      }
    }
 
    &__button--contract {
@@ -114,7 +108,7 @@
 @media(max-width: 1024px){
 .steps{
    &__title {
-      margin-bottom: 49px ;
+      margin-bottom: 54px ;
    }
 
    &__slider-wrapper{
@@ -132,7 +126,7 @@
    &__text{
       max-width: 437px;
       margin-top: 10px;
-      margin-bottom: 23px;
+      margin-bottom: 29px;
    }
 
    &__slider-btn {
@@ -147,10 +141,13 @@
 
 @media(max-width: 1000px){
    .steps{
-
+&__title{
+   margin-bottom: 50px;
+}
    &__slider-wrapper{
 padding-right: 0;
-padding-top: 322px;
+padding-top: 310px;
+
 
       &::before{
 display: none;
@@ -177,7 +174,7 @@ display: none;
    }
 
    &__slider-btn{
-      margin-bottom: 50px;
+      margin-bottom: 45px;
    }
    &__left{
       min-width: 100%;
