@@ -13,8 +13,7 @@
       &::before{
          content: '';
          position: absolute;
-         background-image: url(..//img/consultation_bg.jpg);
-         background: center no-repeat;
+         background: url(../img/consultation_bg.jpg) center no-repeat;
          right: 0;
          top: 13px;
          width: 870px;
@@ -183,4 +182,45 @@ display: none;
       max-width: 100%;
    }
 }
+}
+
+@media(max-width: 420px){
+   .steps{
+      &__title{
+         margin-top: 47px;
+         margin-bottom: 36px;
+      }
+
+&__slider-btn{
+   font-size: 14px;
+   margin: 0 0 17px 0 !important;
+   padding: 0;
+
+}
+
+&__slider-wrapper{
+   padding-top: 161px;
+   &::after{
+      background-image: url(../img/420px/steps_420px.jpg);
+      height: 160px;
+   }
+}
+&__text{
+   font-size: 14px;
+   font-weight: 400;
+   line-height: 2;
+   margin-bottom: 19px;
+}
+&__slider-title{
+   font-weight: 500;
+   font-size: 18px;
+}
+
+&__button{padding: 0; font-size: 12px;}
+
+&__button--about{padding: 13px 44px; font-weight: 700; margin-right: 6px;}
+
+&__button--contract{font-weight: 400; padding: 14px 31px; }
+
+   }
 }

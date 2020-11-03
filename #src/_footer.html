@@ -2,7 +2,15 @@
    <div class="fixed-container">
       <div class="footer__inner">
          <div class="footer__social">
-            <a class="footer__logo" href="#"><img src="img/png/footer-logo.png" alt="logo"></a>
+            <a class="footer__logo" href="#">
+               <picture>
+                  <source srcset="img/png/footer-logo.webp" type="image/webp" media="(min-width: 421px)">
+                     <source srcset="img/420px/footer_logo_420px.webp" type="image/webp"
+                     media="(max-width: 420px)"
+                     >
+                     <img src="img/png/footer-logo.png" alt="logo">
+                  </picture>
+               </a>
             <ul class="footer__social-list">
                
                <li class="footer__social-item"><a href="#" class="footer__social-links">О нас</a></li>

@@ -1,14 +1,21 @@
-* {
-  box-sizing: border-box;
-}
+html {
+   box-sizing: border-box;
+ }
+ 
+ *,
+ *::before,
+ *::after {
+   box-sizing: inherit;
+ }
 
-html,
 body {
   height: 100%;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   background-color: #fff;
   color: rgb(51, 51, 51);
+  min-width: 320px;
+  margin: 0;
 
 }
 
@@ -89,7 +96,7 @@ fieldset {
   .fixed-container{
     max-width: 1024px;
     width: 100%;
-  padding: 0 50px !important;
+  padding: 0 50px;
     margin: 0 auto;
   }
   .title {
@@ -97,3 +104,18 @@ fieldset {
     font-size: 48px;
   }
 }
+
+@media(max-width: 570px){
+   .fixed-container{
+padding: 0 15px;
+   }
+
+ }
+
+
+ @media(max-width: 420px){
+   .title {
+      margin-top: 40px;
+      font-size: 24px;
+    }
+ }

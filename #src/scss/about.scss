@@ -47,12 +47,18 @@
       background: rgba(0, 0, 0, 0.5);
    }
 
+   &__info-box--500px {
+display: none;
+   }
+
    &__info-text {
+      display: inline-block;
+      margin-right: 15px;
       color: #fff;
       font-weight: 700;
       max-width: 500px;
       width: 100%;
-      margin: 0;
+   
       line-height: 32px;
    }
 
@@ -232,11 +238,7 @@ text-align: left;
 @media(max-width: 1000px){
    .about{
       &__advantages-box{
-         
-   padding-top: 37px;
-   padding-bottom: 42px;
-   padding-left: 31px;
-   padding-right: 38px;
+ padding: 37px 38px 42px 31px;
    align-items: center;
 }
    }
@@ -297,4 +299,109 @@ margin-bottom: 40px;
          max-width: 400px;
       }
    }
+}
+
+@media(max-width: 720px){
+   .about{
+      &__info-text{
+         font-weight: 400;
+         font-size: 14px;
+
+   }
+}
+
+@media(max-width: 500px){
+.about{
+   &__info-box{
+      display: none;
+   }
+
+
+   &__info-box--500px {
+      display: block;
+         }
+   
+   &__info-text--500px{
+      font-size: 14px;
+      line-height: 2;
+      margin: 0 0 9px 0;
+   }
+   
+   &__btn--500px{
+   color: $yellow;
+   margin-top: 0;
+   font-size: 12px;
+   font-weight: 700;
+   padding: 12px 42px;
+   border: 2px solid $yellow;
+   margin-bottom: 40px;
+   display: inline-block;
+   }
+
+}
+}
+
+@media(max-width: 420px){
+.about{
+   &__title{
+      margin-bottom: 0;
+   }
+   &__text{
+      margin-top: 5px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 28px;
+      margin-bottom: 10px;
+   }
+
+&__info{
+   background-image: url(../img/420px/worker_420px.jpg);
+   height: 200px;
+   display: block;
+margin-bottom: 9px;
+}
+
+&__advantages-box{
+border: none;
+padding: 0;
+}
+
+&__advantages-text{
+   padding: 0;
+   font-size: 14px;
+   line-height: 2;
+   font-weight: 400;
+padding-top: 62px;
+   &::before{
+      top: -1px;
+      width: 45px;
+      height: 50px;
+      left: 20px;
+
+   }
+   &::after{
+ top: 5px;
+ width: 43px;
+ height: 43px;
+   }
+   span{
+font-weight: 500;
+font-size: 18px;
+line-height: 22px;
+display: inline-block;
+   }
+
+}
+
+&__advantages-text--gear{
+   padding-top: 50px;
+   &::after{top: -7px}
+   &::before{    top: -20px;
+      width: 47px;
+      height: 47px;
+      left: 17px;}
+}
+
+}
+}
 }
