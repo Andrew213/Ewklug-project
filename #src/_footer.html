@@ -8,7 +8,7 @@
                      <source srcset="img/420px/footer_logo_420px.webp" type="image/webp"
                      media="(max-width: 420px)"
                      >
-                     <img src="img/png/footer-logo.png" alt="logo">
+                     <img src="img/png/footer-logo.png" alt="логотип сайта, переход вернет вначало страницы">
                   </picture>
                </a>
             <ul class="footer__social-list">
@@ -31,10 +31,19 @@
          <form class="footer__feedback" action="https://jsonplaceholder.typicode.com/posts" method="POST">
             <fieldset class="footer__form-inner">
                <legend class="footer__title">Оставить заявку</legend>
-               <input type="text" class="footer__input" placeholder="Фамилия, имя и отчество*" name="ФИО"
+         <label>
+            <span class="visually-hidden">Введите имя фамилию и отчество</span>
+            <input type="text" class="footer__input" placeholder="Фамилия, имя и отчество*" name="поле ввода ФИО"
                   autocomplete="on">
-               <input type="email" class="footer__input" placeholder="E-mail*" name="E-mail">
-               <textarea class="footer__input footer__textarea" name="Сообщение" placeholder="Сообщение"></textarea>
+         </label>      
+           <label>
+              <span class="visually-hidden" class="">Введите имэйл</span>
+            <input type="email" class="footer__input" placeholder="E-mail*" name="поле ввода E-mail">
+         </label>
+         <label>
+            <span class="visually-hidden">Введите ваше сообщение</span>
+            <textarea class="footer__input footer__textarea" name="поле ввода Сообщения" placeholder="Сообщение"></textarea>
+         </label>      
               
                <div class="footer__btnAndcheck-wrapper">
                   <button class="footer__btn" type="submit">Отправить данные</button>

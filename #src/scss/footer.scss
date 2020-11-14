@@ -126,6 +126,11 @@
       display: flex;
       align-items: center;
       padding-left: 19px;
+      
+      &:focus{
+         outline: 3px solid #fff;
+         box-shadow: 0 0 0 0.1em #CACACA, 0 0 0 0.2em #7ed321;
+      }
    }
 
    &__check-input {
@@ -158,6 +163,9 @@
    width: 14px;
    height: 14px;
    box-shadow: 0 0 0 0.1em #CACACA;
+   &:focus{
+      outline: 3px solid #fff;
+   }
 }
 
 @media(max-width: 1366px){
