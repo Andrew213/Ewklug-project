@@ -176,7 +176,9 @@ gulp.task("style", function () {
 
 gulp.task("script", function () {
   return gulp
-    .src(["node_modules/mixitup/dist/mixitup.js"])
+    .src(["node_modules/mixitup/dist/mixitup.js",
+    "node_modules/jquery/dist/jquery.js"
+   ])
     .pipe(concat("libs.min.js"))
     .pipe(uglify())
     .pipe(dest(path.build.js));
