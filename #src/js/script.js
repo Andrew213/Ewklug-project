@@ -40,17 +40,41 @@ $(function () {
       enable: false
     }
   });
+
+var mySwiper = new Swiper('.hero-slider__container', {
+   loop: true,
+
+   pagination: {
+     el: '.swiper-pagination',
+     clickable: true,
+   },
+ 
+ });
+
+
+   $('.header__burger').click(function (event) {
+     $('.header__nav').toggleClass('active');
+     $('.body').toggleClass('lock');
+   });
+ 
+
+
+   $( "#accordion" ).accordion({
+      active: false,
+      collapsible: true
+   });
+
+
+   document.addEventListener('click', function(event){
+      const accordionBtn = event.target.closest('.questions__item');
+   
+   if(accordionBtn){
+      accordionBtn.classList.toggle('questions__item--active')
+   }
+   
+   })
+
 });
 
 
 
-
-
-
-// $(function () {
-//   $('#Container').mixItUp({
-//     load: {
-//       filter: '.category-step1'
-//     }
-//   });
-// });

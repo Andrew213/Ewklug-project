@@ -34,9 +34,11 @@
 
 /*  font-display: swap;  для переключения на FOUT мелькание неоформленного текста», когда во время загрузки веб-шрифта текст отображается шрифтом по умолчанию (напр. системным) */
 
+body,
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 *,
@@ -54,6 +56,13 @@ body {
   color: #333333;
   min-width: 320px;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 h1,
@@ -67,16 +76,6 @@ h6 {
   font-weight: inherit;
   font-size: inherit;
   line-height: inherit;
-}
-
-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 ul,
@@ -104,7 +103,7 @@ img {
 }
 
 .fixed-container {
-  max-width: 1810px;
+  max-width: 1810px !important;
   width: 100%;
   padding: 0 20px;
   margin: 0 auto;
@@ -213,8 +212,12 @@ fieldset {
   outline: 3px solid #000;
 }
 
+.hero-slider__container {
+  overflow: hidden;
+  position: relative;
+}
+
 .hero-slider__item {
-  background-image: url(..//img/top_slide_1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -264,6 +267,20 @@ fieldset {
 
 .hero-slider__btn:focus {
   outline: 3px solid #000;
+}
+
+.swiper-pagination.hero-slider__paginator.swiper-pagination-bullets {
+  bottom: 30px;
+}
+
+.swiper-pagination.hero-slider__paginator.swiper-pagination-bullets > .swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  margin: 0 10px;
+}
+
+.swiper-pagination.hero-slider__paginator.swiper-pagination-bullets > .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #fff;
 }
 
 .about__title {
@@ -532,20 +549,42 @@ fieldset {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
-  background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='25.0987' cy='25' rx='24.9013' ry='25' fill='%23ECECEC'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M25.1556 24.0571L25.1556 9L26.0378 9L26.0378 24.0571L33.9471 24.0571L41.0355 24.0571L41.0355 24.9429L26.0378 24.9429L26.0378 40L25.1556 40L25.1556 24.9429L10.1579 24.9429L10.1579 24.0571L25.1556 24.0571Z' fill='%23666666'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
   background-position: right;
+  position: relative;
   border-bottom: 1px solid #cacaca;
+}
+
+.questions__item::before {
+  content: '';
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 0;
+  top: 25%;
+  background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='25.0987' cy='25' rx='24.9013' ry='25' fill='%23ECECEC'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M25.1556 24.0571L25.1556 9L26.0378 9L26.0378 24.0571L33.9471 24.0571L41.0355 24.0571L41.0355 24.9429L26.0378 24.9429L26.0378 40L25.1556 40L25.1556 24.9429L10.1579 24.9429L10.1579 24.0571L25.1556 24.0571Z' fill='%23666666'/%3E%3C/svg%3E%0A");
 }
 
 .questions__item:hover {
   cursor: pointer;
   color: #ff9900;
+}
+
+.questions__item:hover::before {
   background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='25' cy='25' r='25' fill='%23D2D2D2'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z' fill='black'/%3E%3C/svg%3E%0A");
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .questions__item:first-of-type {
   border-top: 1px solid #cacaca;
+}
+
+.questions__item--active::before {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .footer {
@@ -801,12 +840,52 @@ fieldset {
 }
 
 @media (max-width: 1090px) {
+  .body.lock {
+    overflow: hidden;
+  }
+
   .header {
     padding: 26px 0;
   }
 
+  .header__inner {
+    position: relative;
+  }
+
   .header__nav {
-    display: none;
+    z-index: -1;
+    opacity: 0;
+    bottom: -26%;
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    background-color: rgba(255, 255, 255, 0.541);
+    border-radius: 10px;
+  }
+
+  .header__nav.active {
+    opacity: 1;
+    z-index: 5;
+    bottom: -90%;
+  }
+
+  .header__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .header__menu-item {
+    margin: 0 !important;
   }
 
   .header__logo--md {
@@ -1230,6 +1309,11 @@ fieldset {
     padding-bottom: 10px;
   }
 
+  .header__nav.active {
+    opacity: 1;
+    bottom: -70%;
+  }
+
   .about__advantages-text {
     padding-left: 145px;
   }
@@ -1522,10 +1606,15 @@ fieldset {
     font-size: 14px;
     line-height: 24px;
     padding: 20px 58px 23px 0;
+  }
+
+  .questions__item::before {
+    width: 30px;
+    height: 30px;
     background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='15' cy='15' r='15' fill='%23ECECEC'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15.0339 14.4343L15.0339 5.39999L15.5653 5.39999L15.5653 14.4343L20.3297 14.4343L24.5996 14.4343L24.5996 14.9657L15.5653 14.9657L15.5653 24L15.0339 24L15.0339 14.9657L5.99961 14.9657L5.99961 14.4343L15.0339 14.4343Z' fill='%23666666'/%3E%3C/svg%3E%0A");
   }
 
-  .questions__item:hover {
+  .questions__item:hover::before {
     background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='25' cy='25' r='25' fill='%23D2D2D2'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z' fill='black'/%3E%3C/svg%3E%0A");
   }
 
@@ -1561,6 +1650,44 @@ fieldset {
             order: -1;
   }
 
+  .header__nav {
+    right: -100%;
+    bottom: -230px;
+    position: absolute;
+    width: unset;
+    margin: 0;
+    padding: 10px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    background-color: white;
+    border-radius: unset;
+    -webkit-box-shadow: 0px 4px 10px 4px;
+            box-shadow: 0px 4px 10px 4px;
+  }
+
+  .header__nav.active {
+    right: 0;
+    bottom: -230px;
+  }
+
+  .header__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 200px;
+  }
+
   .hero-slider .fixed-container {
     padding: 0 15px;
   }
@@ -1579,6 +1706,10 @@ fieldset {
   .hero-slider__text {
     font-size: 20px;
   }
+
+  .swiper-pagination.hero-slider__paginator.swiper-pagination-bullets {
+    display: none;
+  }
 }
 
 @media (max-width: 420px) {
@@ -1593,6 +1724,19 @@ fieldset {
 
   .header__burger {
     width: 25px;
+  }
+
+  .header__nav {
+    padding: 5px;
+  }
+
+  .header__menu-link {
+    font-size: 14px;
+  }
+
+  .header__nav.active {
+    right: 0;
+    bottom: -217px;
   }
 
   .hero-slider__item {
@@ -1665,8 +1809,6 @@ fieldset {
     padding: 14px 31px;
   }
 }
-
-.webp .hero-slider__item{ background-image: url(..//img/top_slide_1.webp); }
 
 .webp .about__info{ background-image: url(../img/worker.webp); }
 

@@ -168,7 +168,9 @@ gulp.task("svgSprite", function () {
 
 gulp.task("style", function () {
   return gulp
-    .src(["node_modules/normalize.css/normalize.css"])
+    .src(["node_modules/normalize.css/normalize.css",
+    "node_modules/swiper/swiper-bundle.css",
+   ])
     .pipe(concat("libs.min.css"))
     .pipe(cssmin())
     .pipe(dest(path.build.css));
@@ -177,7 +179,9 @@ gulp.task("style", function () {
 gulp.task("script", function () {
   return gulp
     .src(["node_modules/mixitup/dist/mixitup.js",
-    "node_modules/jquery/dist/jquery.js"
+    "node_modules/jquery/dist/jquery.js",
+    "node_modules/swiper/swiper-bundle.js",
+    "node_modules/jquery-ui-dist/jquery-ui.js",
    ])
     .pipe(concat("libs.min.js"))
     .pipe(uglify())

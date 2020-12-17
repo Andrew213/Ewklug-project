@@ -1,6 +1,12 @@
 .hero-slider {
+
+   &__container {
+      overflow: hidden;
+      position: relative;
+   }
+
    &__item {
-      background-image: url(..//img/top_slide_1.jpg);
+
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -122,6 +128,9 @@ margin-bottom: 26px;
 }
 
 }
+.swiper-pagination.hero-slider__paginator.swiper-pagination-bullets{
+   display: none;
+}
 }
 
 @media(max-width: 420px){
@@ -151,3 +160,18 @@ padding: 14px 28px;
 
 }
 }
+
+.swiper-pagination.hero-slider__paginator.swiper-pagination-bullets{
+   bottom: 30px;
+}
+
+.swiper-pagination.hero-slider__paginator.swiper-pagination-bullets > .swiper-pagination-bullet {
+   width: 15px;
+   height: 15px;
+   margin: 0 10px;
+}
+
+.swiper-pagination.hero-slider__paginator.swiper-pagination-bullets > .swiper-pagination-bullet.swiper-pagination-bullet-active {
+background-color: #fff;
+}
+

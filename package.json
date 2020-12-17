@@ -31,6 +31,7 @@
     "gulp-webp-html": "^1.0.2",
     "gulp-webpcss": "^1.1.1",
     "jquery": "^3.5.1",
+    "jquery-ui-dist": "^1.12.1",
     "magnific-popup": "^1.1.0",
     "mixitup": "^3.3.1",
     "normalize.css": "^8.0.1",
@@ -40,5 +41,7 @@
     "slick-carousel": "^1.8.1",
     "webp-converter": "^2.2.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "swiper": "^6.4.1"
+  }
 }
