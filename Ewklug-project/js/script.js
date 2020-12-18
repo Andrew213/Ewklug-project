@@ -65,14 +65,32 @@ var mySwiper = new Swiper('.hero-slider__container', {
    });
 
 
-   document.addEventListener('click', function(event){
-      const accordionBtn = event.target.closest('.questions__item');
+   // document.addEventListener('click', function(event){
+   //    const accordionBtn = event.target.closest('.questions__item');
    
-   if(accordionBtn){
-      accordionBtn.classList.toggle('questions__item--active')
+   // if(accordionBtn){
+   //    accordionBtn.classList.remove('questions__item--active')
+   //    accordionBtn.classList.add('questions__item--active')
+   // }
+   
+   // })
+
+   $('.questions__item').on('click', function (e) {
+
+ 
+    if($(this).hasClass('questions__item--active') ) {
+
+      $(this).removeClass('questions__item--active')
+
+    } else {
+
+      $('.questions__item').removeClass('questions__item--active')
+      $(this).addClass('questions__item--active') 
+
    }
-   
-   })
+
+
+  });
 
 });
 
