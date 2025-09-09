@@ -1,68 +1,127 @@
-<footer class="footer">
-   <div class="fixed-container">
-      <div class="footer__inner">
-         <div class="footer__social">
-            <a class="footer__logo" href="#">
-               <picture>
-                  <source srcset="img/png/footer-logo.webp" type="image/webp" media="(min-width: 421px)">
-                     <source srcset="img/420px/footer_logo_420px.webp" type="image/webp"
-                     media="(max-width: 420px)"
-                     >
-                     <img src="img/png/footer-logo.png" alt="логотип сайта, переход вернет вначало страницы">
-                  </picture>
-               </a>
-            <ul class="footer__social-list">
-               
-               <li class="footer__social-item"><a href="#" class="footer__social-links">О нас</a></li>
-               <li class="footer__social-item"><a href="#" class="footer__social-links">Проекты</a></li>
-               <li class="footer__social-item"><a href="#" class="footer__social-links">Отзывы</a></li>
-               <li class="footer__social-item"><a href="#" class="footer__social-links">Договор оферты</a></li>
-               <li class="footer__social-item"><a href="#" class="footer__social-links">Договор подряда</a></li>
-               <li class="footer__social-item"><a href="#" class="footer__social-links">Конфиденциальность</a></li>
-               <li class="footer__social-item"><a href="#" class="footer__social-links">Партнёрское соглашение</a>
-               </li>
-            </ul>
-            <div class="footer__social-networks-wrapper">
-               <a class="footer__social-networks  footer__social-networks--fb" aria-label="Фейсбук" href="#"></a>
-               <a class="footer__social-networks footer__social-networks--vk" aria-label="Вконтакте" href="#"></a>
-               <a class="footer__social-networks footer__social-networks--inst" aria-label="Инстаграм" href="#"></a>
-            </div>
-         </div>
-         <form class="footer__feedback" action="https://jsonplaceholder.typicode.com/posts" method="POST">
-            <fieldset class="footer__form-inner">
-               <legend class="footer__title">Оставить заявку</legend>
-         <label>
-            <span class="visually-hidden">Введите имя фамилию и отчество</span>
-            <input type="text" class="footer__input" placeholder="Фамилия, имя и отчество*" name="поле ввода ФИО"
-                  autocomplete="on">
-         </label>      
-           <label>
-              <span class="visually-hidden" class="">Введите имэйл</span>
-            <input type="email" class="footer__input" placeholder="E-mail*" name="поле ввода E-mail">
-         </label>
-         <label>
-            <span class="visually-hidden">Введите ваше сообщение</span>
-            <textarea class="footer__input footer__textarea" name="поле ввода Сообщения" placeholder="Сообщение"></textarea>
-         </label>      
-              
-               <div class="footer__btnAndcheck-wrapper">
-                  <button class="footer__btn" type="submit">Отправить данные</button>
-                  <div class="footer__check-wrapper">
-                     <label class="footer__check">
-                        <input class="footer__check-input" type="checkbox" name="a" checked required>
-                        <span class="check-box"></span>
-                        Согласие на обработку данных
-                     </label>
-                  </div>
-               
-               </div>
-            </fieldset>
-         </form>
-         <p class="footer__text">Высокий уровень вовлечения представителей целевой аудитории является четким
-            доказательством простого факта: разбавленное изрядной долей эмпатии, рациональное мышление позволяет
-            оценить значение модели развития. Таким образом, консультация с широким активом обеспечивает широкому
-            кругу (специалистов) участие в формировании стандартных подходов. </p>
+<footer class="footer" id="footer">
+  <div class="fixed-container">
+    <div class="footer__inner">
+      <div class="footer__social">
+        <a class="footer__logo" href="#">
+          <picture>
+            <source
+              srcset="img/png/footer-logo.webp"
+              type="image/webp"
+              media="(min-width: 421px)"
+            />
+            <source
+              srcset="img/420px/footer_logo_420px.webp"
+              type="image/webp"
+              media="(max-width: 420px)"
+            />
+            <img
+              src="img/png/footer-logo.png"
+              alt="логотип сайта, переход вернет вначало страницы"
+            />
+          </picture>
+        </a>
+        <ul class="footer__social-list">
+          <li class="footer__social-item">
+            <a href="#" class="footer__social-links">О нас</a>
+          </li>
+          <li class="footer__social-item">
+            <a href="#" class="footer__social-links">Проекты</a>
+          </li>
+          <li class="footer__social-item">
+            <a href="#" class="footer__social-links">Отзывы</a>
+          </li>
+          <li class="footer__social-item">
+            <a href="#" class="footer__social-links">Договор оферты</a>
+          </li>
+          <li class="footer__social-item">
+            <a href="#" class="footer__social-links">Договор подряда</a>
+          </li>
+          <li class="footer__social-item">
+            <a href="#" class="footer__social-links">Конфиденциальность</a>
+          </li>
+          <li class="footer__social-item">
+            <a href="#" class="footer__social-links">Партнёрское соглашение</a>
+          </li>
+        </ul>
+        <div class="footer__social-networks-wrapper">
+          <a
+            class="footer__social-networks footer__social-networks--fb"
+            aria-label="Фейсбук"
+            href="#"
+          ></a>
+          <a
+            class="footer__social-networks footer__social-networks--vk"
+            aria-label="Вконтакте"
+            href="#"
+          ></a>
+          <a
+            class="footer__social-networks footer__social-networks--inst"
+            aria-label="Инстаграм"
+            href="#"
+          ></a>
+        </div>
       </div>
+      <form
+        class="footer__feedback"
+        action="https://jsonplaceholder.typicode.com/posts"
+        method="POST"
+      >
+        <fieldset class="footer__form-inner">
+          <legend class="footer__title">Оставить заявку</legend>
+          <label>
+            <span class="visually-hidden">Введите имя фамилию и отчество</span>
+            <input
+              type="text"
+              class="footer__input"
+              placeholder="Фамилия, имя и отчество*"
+              name="поле ввода ФИО"
+              autocomplete="on"
+            />
+          </label>
+          <label>
+            <span class="visually-hidden" class="">Введите имэйл</span>
+            <input
+              type="email"
+              class="footer__input"
+              placeholder="E-mail*"
+              name="поле ввода E-mail"
+            />
+          </label>
+          <label>
+            <span class="visually-hidden">Введите ваше сообщение</span>
+            <textarea
+              class="footer__input footer__textarea"
+              name="поле ввода Сообщения"
+              placeholder="Сообщение"
+            ></textarea>
+          </label>
 
-   </div>
-</footer> 
+          <div class="footer__btnAndcheck-wrapper">
+            <button class="footer__btn" type="submit">Отправить данные</button>
+            <div class="footer__check-wrapper">
+              <label class="footer__check">
+                <input
+                  class="footer__check-input"
+                  type="checkbox"
+                  name="a"
+                  checked
+                  required
+                />
+                <span class="check-box"></span>
+                Согласие на обработку данных
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+      <p class="footer__text">
+        Высокий уровень вовлечения представителей целевой аудитории является
+        четким доказательством простого факта: разбавленное изрядной долей
+        эмпатии, рациональное мышление позволяет оценить значение модели
+        развития. Таким образом, консультация с широким активом обеспечивает
+        широкому кругу (специалистов) участие в формировании стандартных
+        подходов.
+      </p>
+    </div>
+  </div>
+</footer>
